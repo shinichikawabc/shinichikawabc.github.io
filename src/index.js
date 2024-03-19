@@ -1,17 +1,31 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import Introduction from './Introduction';
+import Projects from './Projects';
+import Education from './Education';
+import Contacts from './Contacts';
 
+
+function Website() {
+  return (
+      <div>
+          <header style={{ backgroundColor: '#333', color: '#fff', padding: '20px', textAlign: 'center' }}>
+              <h1>Shinichi Ishikawa</h1>
+              <p>Software Engineer</p>
+          </header>
+          <div style={{ maxWidth: '800px', margin: '20px auto', padding: '20px', backgroundColor: '#fff', borderRadius: '5px', boxShadow: '0 0 10px rgba(0, 0, 0, 0.1)' }}>
+              <Introduction />
+              <Projects />
+              <Education />
+              <Contacts />
+          </div>
+      </div>
+  );
+}
+
+ReactDOM.render(<PersonalWebsite />, document.getElementById('root'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>
+    <Website />
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
