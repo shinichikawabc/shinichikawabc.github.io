@@ -23,7 +23,7 @@ function Website() {
   );
 }
 
-ReactDOM.render(<PersonalWebsite />, document.getElementById('root'));
+ReactDOM.render(<Website />, document.getElementById('root'));
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
     <Website />
